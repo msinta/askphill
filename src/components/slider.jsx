@@ -5,33 +5,27 @@ import running from '../components/images/running.png';
 
 function ImageSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const url1 = fitness;
-  const url2 = tennis;
-  const url3 = running;
   const slides = [
-    { path: url1 },
-    { path: url2 },
-    { path: url3},
+    { path: fitness },
+    { path: tennis },
+    { path: running},
   ];
-  const handlePrevSlide = () => {
-    setCurrentSlide(currentSlide - 1);
-  }
 
-  const handleNextSlide = () => {
-    setCurrentSlide(currentSlide + 1);
+  const handleSlide = (move) => {
+    move === 'prev' ? setCurrentSlide(currentSlide - 1) : setCurrentSlide(currentSlide + 1)
   }
 
   return (
     <div className="image-slider-container">
-      <div className="mobile-menu__slider">
+      <div className="image-slider">
         {slides.map((slide, index) => (
           <div key={index} className={`slide ${currentSlide === index ? 'active' : ''}`}>
             <img src={slide.path} alt="slide" />
           </div>
         ))}
       </div>
-      <button className={currentSlide === 0 ? 'hidden' : ''} onClick={handlePrevSlide}>prev</button>
-      <button className={currentSlide === slides.length - 1 ? 'hidden' : ''} onClick={handleNextSlide}>next</button>
+      <button className={`${currentSlide === 0 ? 'hidden' : 'prev'}`} onClick={() => handleSlide('prev')}>prev</button>
+      <button className={`${currentSlide === slides.length - 1 ? 'hidden' : 'next'}`} onClick={() => handleSlide('next')}>next</button>
     </div>
   );
 }

@@ -6,16 +6,22 @@ $secondary-color: #ffffff;
 }
 
 .image-slider-container {
+  width: 378px;
+  height: 180px;
   position: relative;
-  width: 100%;
-  height: 100%;
+
 
   .image-slider {
     display: flex;
     position: absolute;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
     width: 100%;
-    height: 100%;
+    height: 180px;
     overflow: hidden;
+    gap: 12px;
+    padding-top: 30px;
 
     .slide {
       width: 100%;
@@ -85,7 +91,7 @@ $secondary-color: #ffffff;
 
   &__slider {
     width: 100%;
-    height: 50%;
+    height: 100%;
     overflow: hidden;
 
     // Style the individual images
