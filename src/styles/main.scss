@@ -32,9 +32,16 @@ $secondary-color: #ffffff;
   }
 
   &__logo {
-    width: 2rem;
-    height: 2rem;
+    position: absolute;
+  left: 12.27%;
+  right: 52.53%;
+top: 1.82%;
+bottom: 96.7%;
+
+
   }
+
+
 
   &__slider {
     width: 100%;

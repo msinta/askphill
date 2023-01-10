@@ -4,7 +4,7 @@ function Accordion() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const accordionData = [
-    { title: "Daily", content: [ "Sport Socks", "Check"]},
+    { title: "Daily", content: [ "Sport Socks", "Check", "data.3"]},
     { title: "Sports", content: "content 2"},
     { title: "Travel", content: "content 2"},
     { title: "Medical", content: "content 2"},
