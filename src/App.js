@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const sliderContainer = document.querySelector('.image-slider-container');
+const slider = document.querySelector('.image-slider');
+
+let clicked = false;
+let xAxis;
+let x;
+
+sliderContainer.addEventListener('mouseup', () => {
+    sliderContainer.style.cursor = `grab`;
+})
+sliderContainer.addEventListener('mousedown', e => {
+    clicked = true
+    xAxis = e.offsetX - slider.offsetLeft;
+    // tells the current position
+
+    sliderContainer.style.cursor = `grabbing`
+})
+
+window.addEventListener('mouseup', () => {
+    clicked = false
+})
+
+sliderContainer.addEventListener('mousemove', e => {
+    if (!clicked) return;
+    e.preventDefault();
+
+    x = e.offsetX;
+    slider.style.left = `${x - xAxis}px`;
+    // but we dont want it to scroll forever
+
+    checkSize()
+})
+
+function checkSize () {
+    let sliderContainerOut = sliderContainer.getBoundingClientRect();
+    let sliderIn = slider.getBoundingClientRect();
+
+    if (parseInt(slider.style.left) > 0) {
+        slider.style.left = `0px`;
+    } else if (sliderIn.right < sliderContainerOut.right) {
+        slider.style.left = `-${sliderIn.width - sliderContainerOut.width}px`
+    }
 }
 
-export default App;
+export default checkSize;

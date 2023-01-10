@@ -1,14 +1,18 @@
+
+
 $primary-color: #ffffff;
 $secondary-color: #ffffff;
 
 @media only screen and (max-width: 375px) {
-  /* styles to apply when screen width is <= 768px */
+
 }
 
 .image-slider-container {
   width: 378px;
   height: 180px;
   position: relative;
+  padding-bottom: 30px;
+  padding-top: 30px;
 
 
   .image-slider {
@@ -21,7 +25,7 @@ $secondary-color: #ffffff;
     height: 180px;
     overflow: hidden;
     gap: 12px;
-    padding-top: 30px;
+
 
     .slide {
       width: 100%;
@@ -143,10 +147,48 @@ $secondary-color: #ffffff;
 
 
   &__accordion {
-    width: 100%;
-    height: 50%;
-    overflow-y: scroll;
-    padding: 1rem;
-    background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 19px;
+    position: absolute;
+    width: 375px;
+    height: 358.71px;
+    left: 0px;
+    top: 299px;
+
+      .accordion:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: rgb(0, 0, 0);
+        float: right;
+        margin-left: 5px;
+      }
+
+        .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+      }
+
+
+
+    button{
+
+      width: 375px;
+      height: 47px;
+      left: 33px;
+      top: 19px;
+      font-family: 'Maison Neue';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 100%;
+      letter-spacing: 0.5px;
+      color: #151515;
+      padding-right: 100%;
+      background: white;
+      border: 1px solid #ECECEC;
+
+    }
   }
 }
