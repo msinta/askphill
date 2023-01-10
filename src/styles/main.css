@@ -1,3 +1,50 @@
+@media only screen and (max-width: 375px) {
+  /* styles to apply when screen width is <= 768px */ }
+
+.image-slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .image-slider-container .image-slider {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .image-slider-container .image-slider .slide {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      position: relative; }
+      .image-slider-container .image-slider .slide.active {
+        z-index: 1;
+        transform: translateX(0); }
+      .image-slider-container .image-slider .slide:not(.active) {
+        z-index: 0;
+        transform: translateX(-100%); }
+  .image-slider-container button {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 1rem;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s; }
+    .image-slider-container button.prev {
+      left: 1rem; }
+    .image-slider-container button.next {
+      right: 1rem; }
+    .image-slider-container button.hidden {
+      visibility: hidden; }
+    .image-slider-container button:hover {
+      transform: translateY(-50%) scale(1.2); }
+
 .mobile-menu {
   background-color: #ffffff;
   position: fixed;
@@ -11,31 +58,48 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    color: white; }
-  .mobile-menu__hamburger {
-    border: none;
-    background-color: transparent;
+    padding: 24px;
     color: white;
-    font-size: 2rem;
-    cursor: pointer; }
-    .mobile-menu__hamburger:hover {
-      color: white; }
-  .mobile-menu__logo {
-    width: 2rem;
-    height: 2rem; }
+    border: 1px solid #ECECEC; }
   .mobile-menu__slider {
     width: 100%;
     height: 50%;
     overflow: hidden; }
     .mobile-menu__slider img {
       width: 100%; }
+  .mobile-menu__hamburger {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 3.47%;
+    right: 91.2%;
+    top: 1.73%;
+    bottom: 96.7%;
+    width: 20px;
+    height: 18px; }
+    .mobile-menu__hamburger:hover {
+      color: white; }
+  .mobile-menu__cart {
+    width: 17px;
+    height: 20.5px;
+    position: absolute;
+    left: 92%;
+    right: 3.47%;
+    bottom: 96.57%;
+    top: 1.65%; }
+  .mobile-menu__logo {
+    position: absolute;
+    left: 12.27%;
+    right: 52.53%;
+    top: 1.82%;
+    bottom: 96.7%;
+    width: 132px;
+    height: 17px; }
   .mobile-menu__accordion {
     width: 100%;
     height: 50%;
     overflow-y: scroll;
     padding: 1rem;
     background-color: #ffffff; }
-
-@media (max-width: 767px) {
-  }
