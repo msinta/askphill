@@ -1,24 +1,9 @@
-.exit-icon {
-  background-color: #000000;
-  /* sets background color of the button */
-  border-radius: 50%;
-  /* sets button to be a circle */
-  width: 40px;
-  /* sets width of the button */
-  height: 40px;
-  /* sets height of the button */
-  display: flex;
-  /* centers the icon in the button */
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease-in-out;
-  /* adds transition effect on hover */ }
-
-.exit-icon img {
-  width: 20px;
-  /* sets width of the icon */
-  height: 20px;
-  /* sets height of the icon */ }
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; }
 
 .contact-info {
   font-family: 'Maison Neue';
@@ -32,27 +17,23 @@
   margin-top: 60px; }
 
 .slider-wrap {
-  position: sticky;
-  left: 13px;
+  margin-left: 13px;
   width: 362px;
   height: 240px;
   cursor: grab; }
 
 .slider {
-  position: sticky;
   height: 240px;
-  width: 364px;
+  width: 100%;
   overflow: scroll; }
 
 .slider-inner {
-  position: absolute;
   left: 0;
   width: 95%;
   height: 240px;
   display: flex; }
 
 .item {
-  position: relative;
   display: flex;
   align-items: center;
   margin-top: 30px;
@@ -82,13 +63,6 @@
 /* Hide scrollbar for Chrome, Safari and Opera */
 .slider::-webkit-scrollbar {
   display: none; }
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.slider {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */ }
 
 .mobile-menu {
   background-color: #ffffff; }

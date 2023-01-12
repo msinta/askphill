@@ -1,29 +1,17 @@
-
-
 $primary-color: #ffffff;
 $secondary-color: #ffffff;
 
 @media only screen and (max-width: 375px) {
 
 }
-
-.exit-icon {
-  background-color: #000000; /* sets background color of the button */
-  border-radius: 50%; /* sets button to be a circle */
-  width: 40px; /* sets width of the button */
-  height: 40px; /* sets height of the button */
-  display: flex; /* centers the icon in the button */
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease-in-out; /* adds transition effect on hover */
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 
-
-
-.exit-icon img {
-  width: 20px; /* sets width of the icon */
-  height: 20px; /* sets height of the icon */
-}
 .contact-info{
   font-family: 'Maison Neue';
   font-style: normal;
@@ -39,8 +27,7 @@ $secondary-color: #ffffff;
 
 
 .slider-wrap {
-  position: sticky;
-  left: 13px;
+  margin-left: 13px;
   width: 362px;
   height: 240px;
   cursor: grab;
@@ -48,15 +35,13 @@ $secondary-color: #ffffff;
 }
 
 .slider {
-  position: sticky;
   height: 240px;
-  width: 364px;
+  width: 100%;
   overflow: scroll;
 
 }
 
 .slider-inner {
-  position: absolute;
   left: 0;
   width: 95%;
   height: 240px;
@@ -65,7 +50,6 @@ $secondary-color: #ffffff;
 }
 
 .item {
-  position: relative;
   display: flex;
   align-items: center;
   margin-top: 30px;
@@ -102,12 +86,6 @@ $secondary-color: #ffffff;
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.slider {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 
 .mobile-menu {
   background-color: $secondary-color;
@@ -129,7 +107,7 @@ $secondary-color: #ffffff;
     height: 100%;
     overflow: hidden;
 
-    // Style the individual images
+
     img {
       width: 100%;
     }
@@ -193,7 +171,6 @@ $secondary-color: #ffffff;
 
 
     button{
-
       width: 375px;
       height: 47px;
       left: 33px;
