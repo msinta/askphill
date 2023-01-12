@@ -5,11 +5,11 @@ function Accordion() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const accordionData = [
-    { title: "DAILY", content: [{ item: "RUNNING SOCKS", qty: "25 products"},{item: "CHECK", qty: "25 products"}, {item: "DATA.3", qty: "25 products"}]},
+    { title: "DAILY", content: [{ item: "RUNNING SHOES", qty: "25 products"},{item: "SPORT SHOES", qty: "25 products"}, {item: "HIKING SHOES", qty: "25 products"}]},
     { title: "SPORTS", content: [{ item: "SPORT SOCKS", qty: "25 products"},{item: "RUNNING SOCKS", qty: "25 products"}, {item: "SKI SOCKS", qty: "25 products"},{item: "FLIGHT SOCKS", qty: "25 products"}, {item: "HIKING SOCKS", qty: "25 products"}, {item: "WORK SOCKS", qty: "25 products"}]},
-    { title: "TRAVEL", content: [{ item: "RUNNING SOCKS", qty: "25 products"},{item: "CHECK", qty: "25 products"}, {item: "DATA.3", qty: "25 products"}]},
-    { title: "MEDICAL", content: [{ item: "RUNNING SOCKS", qty: "25 products"},{item: "CHECK", qty: "25 products"}, {item: "DATA.3", qty: "25 products"}]},
-    { title: "MORE", content: [{ item: "RUNNING SOCKS", qty: "25 products"},{item: "CHECK", qty: "25 products"}, {item: "DATA.3", qty: "25 products"}]}
+    { title: "TRAVEL", content: [{ item: "BELT", qty: "25 products"},{item: "BRIEFCASE", qty: "25 products"}]},
+    { title: "MEDICAL", content: [{ item: "SAFETY MASK", qty: "25 products"},{item: "NEEDLE", qty: "25 products"}, {item: "GLASSES", qty: "25 products"}]},
+    { title: "MORE", content: [{ item: "HATS", qty: "25 products"},{item: "COATS", qty: "25 products"}, {item: "SHORTS", qty: "25 products"}]}
     ]
 
   const handleAccordionClick = (index) => {
