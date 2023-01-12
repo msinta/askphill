@@ -1,3 +1,4 @@
+import React, { Component }  from 'react';
 
 import Accordion from './Accordion';
 import ImageSlider from './Slider';
