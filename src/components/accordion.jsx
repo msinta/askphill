@@ -5,12 +5,12 @@ function Accordion() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const accordionData = [
-    { title: "Daily", content: [{ item: "Running Socks", qty: "25 products"},{item: "Check", qty: "25 products"}, {item: "data.3", qty: "25 products"}]},
-    { title: "Sports", content: [{ item: "Sport Socks", qty: "25 products"},{item: "Running Socks", qty: "25 products"}, {item: "Ski Socks", qty: "25 products"},{item: "Flight Socks", qty: "25 products"}, {item: "Hiking Socks", qty: "25 products"}, {item: "Work Socks", qty: "25 products"}]},
-    { title: "Travel", content: [{ item: "Running Socks", qty: "25 products"},{item: "Check", qty: "25 products"}, {item: "data.3", qty: "25 products"}]},
-    { title: "Medical", content: [{ item: "Running Socks", qty: "25 products"},{item: "Check", qty: "25 products"}, {item: "data.3", qty: "25 products"}]},
-    { title: "More", content: [{ item: "Running Socks", qty: "25 products"},{item: "Check", qty: "25 products"}, {item: "data.3", qty: "25 products"}]}
-  ]
+    { title: "DAILY", content: [{ item: "RUNNING SOCKS", qty: "25 products"},{item: "CHECK", qty: "25 products"}, {item: "DATA.3", qty: "25 products"}]},
+    { title: "SPORTS", content: [{ item: "SPORT SOCKS", qty: "25 products"},{item: "RUNNING SOCKS", qty: "25 products"}, {item: "SKI SOCKS", qty: "25 products"},{item: "FLIGHT SOCKS", qty: "25 products"}, {item: "HIKING SOCKS", qty: "25 products"}, {item: "WORK SOCKS", qty: "25 products"}]},
+    { title: "TRAVEL", content: [{ item: "RUNNING SOCKS", qty: "25 products"},{item: "CHECK", qty: "25 products"}, {item: "DATA.3", qty: "25 products"}]},
+    { title: "MEDICAL", content: [{ item: "RUNNING SOCKS", qty: "25 products"},{item: "CHECK", qty: "25 products"}, {item: "DATA.3", qty: "25 products"}]},
+    { title: "MORE", content: [{ item: "RUNNING SOCKS", qty: "25 products"},{item: "CHECK", qty: "25 products"}, {item: "DATA.3", qty: "25 products"}]}
+    ]
 
   const handleAccordionClick = (index) => {
     if (index === activeIndex) {
@@ -23,7 +23,7 @@ function Accordion() {
   return (
     <div>
       {accordionData.map((item, index) => (
-        <div key={index}>
+        <div style={{border: "1px solid #ECECEB"}} key={index}>
           <button onClick={() => handleAccordionClick(index)}>
             {item.title}
             {activeIndex === index && <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">

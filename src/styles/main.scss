@@ -168,21 +168,10 @@ $secondary-color: #ffffff;
     gap: 19px;
     position: inherit;
     width: 375px;
-
+    border: 1px solid #ECECEC;
     left: 0px;
     top: 299px;
 
-      .accordion:after {
-        content: '\02795'; /* Unicode character for "plus" sign (+) */
-        font-size: 13px;
-        color: rgb(0, 0, 0);
-        float: right;
-        margin-left: 5px;
-      }
-
-        .active:after {
-        content: "\2796"; /* Unicode character for "minus" sign (-) */
-      }
 
 
 
@@ -200,7 +189,7 @@ $secondary-color: #ffffff;
       letter-spacing: 0.5px;
       color: #151515;
       background: white;
-      border: 1px solid #ECECEC;
+      border: 1px solid white;
       display: flex;
       justify-content: space-between;
       align-items: center;

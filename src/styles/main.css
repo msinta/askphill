@@ -122,18 +122,9 @@
     gap: 19px;
     position: inherit;
     width: 375px;
+    border: 1px solid #ECECEC;
     left: 0px;
     top: 299px; }
-    .mobile-menu__accordion .accordion:after {
-      content: '\02795';
-      /* Unicode character for "plus" sign (+) */
-      font-size: 13px;
-      color: black;
-      float: right;
-      margin-left: 5px; }
-    .mobile-menu__accordion .active:after {
-      content: "\2796";
-      /* Unicode character for "minus" sign (-) */ }
     .mobile-menu__accordion button {
       width: 375px;
       height: 47px;
@@ -147,7 +138,7 @@
       letter-spacing: 0.5px;
       color: #151515;
       background: white;
-      border: 1px solid #ECECEC;
+      border: 1px solid white;
       display: flex;
       justify-content: space-between;
       align-items: center;
