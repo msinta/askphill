@@ -5,11 +5,11 @@ function Accordion() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const accordionData = [
-    { title: "Daily", content: [{ item: "Running Socks", qty: 25},{item: "Check", qty: 25}, {item: "data.3", qty: 25}]},
-    { title: "Sports", content: [{ item: "Running Socks"},{item: "Check"}, {item: "data.3"}]},
-    { title: "Travel", content: [{ item: "Running Socks"},{item: "Check"}, {item: "data.3"}]},
-    { title: "Medical", content: [{ item: "Running Socks"},{item: "Check"}, {item: "data.3"}]},
-    { title: "More", content: [{ item: "Running Socks"},{item: "Check"}, {item: "data.3"}]}
+    { title: "Daily", content: [{ item: "Running Socks", qty: "25 products"},{item: "Check", qty: "25 products"}, {item: "data.3", qty: "25 products"}]},
+    { title: "Sports", content: [{ item: "Sport Socks", qty: "25 products"},{item: "Running Socks", qty: "25 products"}, {item: "Ski Socks", qty: "25 products"},{item: "Flight Socks", qty: "25 products"}, {item: "Hiking Socks", qty: "25 products"}, {item: "Work Socks", qty: "25 products"}]},
+    { title: "Travel", content: [{ item: "Running Socks", qty: "25 products"},{item: "Check", qty: "25 products"}, {item: "data.3", qty: "25 products"}]},
+    { title: "Medical", content: [{ item: "Running Socks", qty: "25 products"},{item: "Check", qty: "25 products"}, {item: "data.3", qty: "25 products"}]},
+    { title: "More", content: [{ item: "Running Socks", qty: "25 products"},{item: "Check", qty: "25 products"}, {item: "data.3", qty: "25 products"}]}
   ]
 
   const handleAccordionClick = (index) => {
@@ -35,7 +35,8 @@ function Accordion() {
           </button>
 
           {activeIndex === index && item.content.map((list, index) => (
-          <div>{list.item}{list.qty} </div>))}
+          <div className="list-product">{list.item}
+          <div className="product-qty">{list.qty}</div> </div>))}
         </div>
       ))}
     </div>
