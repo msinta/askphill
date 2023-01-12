@@ -7,6 +7,23 @@ $secondary-color: #ffffff;
 
 }
 
+.exit-icon {
+  background-color: #000000; /* sets background color of the button */
+  border-radius: 50%; /* sets button to be a circle */
+  width: 40px; /* sets width of the button */
+  height: 40px; /* sets height of the button */
+  display: flex; /* centers the icon in the button */
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out; /* adds transition effect on hover */
+}
+
+
+
+.exit-icon img {
+  width: 20px; /* sets width of the icon */
+  height: 20px; /* sets height of the icon */
+}
 .contact-info{
   font-family: 'Maison Neue';
   font-style: normal;

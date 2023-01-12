@@ -7,7 +7,6 @@ import running from '../components/images/running.png';
 
 const ImageSlider = () => {
 
-
   const [sliderGrabbed, setSliderGrabbed] = useState(false);
   const sliderRef = useRef(null);
 
@@ -17,7 +16,6 @@ const ImageSlider = () => {
     path2: tennis ,
     path3: running,
   };
-
 
 
   const handleMouseDown = () => {
