@@ -19,7 +19,7 @@ function Menu() {
       </div>
       {isOpen && (
         <div className="dropdown-menu">
-          <p>Dropdown menu content goes here</p>
+          <p style={{margin: "56px"}}>Dropdown menu content goes here</p>
         </div>
       )}
     </div>
