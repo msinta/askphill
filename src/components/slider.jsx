@@ -57,19 +57,19 @@ const ImageSlider = () => {
           onMouseMove={handleMouseMove}
           onWheel={handleWheel}>
           <div className="item">
-          <img src={slides['path3']} alt="slide" />
+          <img src={slides['path3']} alt="slide" style={{width: "118px", height: "180px"}} />
           </div>
           <div className="item">
-          <img src={slides['path1']} alt="slide" />
+          <img src={slides['path1']} alt="slide" style={{width: "118px", height: "180px"}}/>
           </div>
           <div className="item">
-          <img src={slides['path2']} alt="slide" />
+          <img src={slides['path2']} alt="slide" style={{width: "118px", height: "180px"}}/>
           </div>
           <div className="item">
-          <img src={slides['path2']} alt="slide" />
+          <img src={slides['path2']} alt="slide"style={{width: "118px", height: "180px"}} />
           </div>
           <div className="item">
-          <img src={slides['path1']} alt="slide" />
+          <img src={slides['path1']} alt="slide" style={{width: "118px", height: "180px"}}/>
           </div>
 
         </div>

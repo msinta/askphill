@@ -1,6 +1,6 @@
 .slider-wrap {
-  position: relative;
-  top: 10%;
+  position: sticky;
+  top: 5%;
   left: 5%;
   width: 90%;
   height: 300px;
@@ -8,36 +8,30 @@
   cursor: grab; }
 
 .slider {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  overflow: scroll;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  overflow: scroll; }
 
 .slider-inner {
   position: absolute;
   display: flex;
-  justify-content: space-around;
   top: 0;
   left: 0;
-  width: 1200px;
+  width: 95%e;
   height: 100%;
-  display: flex;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  display: flex; }
 
 .item {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 118px;
   height: 180px;
   top: 1%;
-  padding-bottom: 30px; }
+  margin-right: 15px; }
 
 .progress-bar {
   position: absolute;
