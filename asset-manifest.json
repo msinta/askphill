@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6f41399f.css",
+    "main.js": "/static/js/main.013d6b2e.js",
+    "static/js/787.32995642.chunk.js": "/static/js/787.32995642.chunk.js",
+    "static/media/running.png": "/static/media/running.8ba4a3390ec15748cf3b.png",
+    "static/media/tennis.png": "/static/media/tennis.7f64ef8fb22e56d5b8b3.png",
+    "static/media/fitness.png": "/static/media/fitness.983df5513f9a828268fb.png",
+    "index.html": "/index.html",
+    "main.6f41399f.css.map": "/static/css/main.6f41399f.css.map",
+    "main.013d6b2e.js.map": "/static/js/main.013d6b2e.js.map",
+    "787.32995642.chunk.js.map": "/static/js/787.32995642.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f41399f.css",
+    "static/js/main.013d6b2e.js"
+  ]
+}
