@@ -2,20 +2,17 @@
 
 🔗  [Link to Website ](https://msinta.github.io/askphill/)
 
-- Objective:
+## Objective:
 Recreate the mobile menu from STOX energy socks. The assignment is designed to assess your ability
 to:
-
-The design file is supplied here(https://www.figma.com/file/yMto60axvQDtjwDIRMAxdF/STOX-Assignment-2022...), please recreate the design in a pixel-perfect manner. If you find
-instances where the design hinders your development, it is recommended to use your best judgement
-to make the menu look as presentable as possible.
-
-Functionality:
 1. Follow a design to the pixel;
 2. Style websites;
 3. How you would model and manipulate simple data in React / Javascript.
 
-Additional:
+The design file is supplied here(https://www.figma.com/file/yMto60axvQDtjwDIRMAxdF/STOX-Assignment-2022...), please recreate the design in a pixel-perfect manner. If you find instances where the design hinders your development, it is recommended to use your best judgement
+to make the menu look as presentable as possible.
+
+## Functionality:
 1. When you click on hamburger it appears (see for reference). By default the page
 should be empty.
 
