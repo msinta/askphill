@@ -12,9 +12,11 @@
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0.5px;
-  margin-left: 33px;
-  margin-right: 142px;
-  margin-top: 60px; }
+  padding-left: 33px;
+  width: 343px;
+  padding-top: 60px;
+  padding-bottom: 226px;
+  border-right: 1px solid #ececeb; }
 
 .slider-wrap {
   margin-left: 13px;
@@ -24,8 +26,9 @@
 
 .slider {
   height: 240px;
-  width: 100%;
-  overflow: scroll; }
+  width: 363px;
+  overflow: scroll;
+  border-right: 1px solid #ECECEC; }
 
 .slider-inner {
   left: 0;
@@ -71,9 +74,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 59px;
     color: white;
-    border: 1px solid #ECECEC; }
+    border: 1px solid #ECECEC;
+    width: 375px;
+    height: 59px; }
   .mobile-menu__slider {
     width: 100%;
     height: 100%;
@@ -85,31 +89,26 @@
     background-color: transparent;
     color: white;
     cursor: pointer;
-    position: absolute;
-    left: 3.47%;
-    right: 91.2%;
-    top: 1.73%;
-    bottom: 96.7%;
+    margin-left: 13px;
+    margin-right: 13px;
     width: 20px;
-    height: 18px; }
+    height: 18px;
+    margin-bottom: 21px;
+    margin-top: 20px; }
     .mobile-menu__hamburger:hover {
       color: white; }
   .mobile-menu__cart {
     width: 17px;
     height: 20.5px;
-    position: absolute;
-    left: 92%;
-    right: 3.47%;
-    bottom: 96.57%;
-    top: 1.65%; }
+    margin-right: 18px;
+    margin-bottom: 19.5px;
+    margin-top: 19px; }
   .mobile-menu__logo {
-    position: absolute;
-    left: 12.27%;
-    right: 52.53%;
-    top: 1.82%;
-    bottom: 96.7%;
+    margin-right: 167px;
     width: 132px;
-    height: 17px; }
+    height: 17px;
+    margin-bottom: 21px;
+    margin-top: 19px; }
   .mobile-menu__accordion {
     display: flex;
     flex-direction: column;
@@ -118,7 +117,6 @@
     gap: 19px;
     position: inherit;
     width: 375px;
-    border: 1px solid #ECECEC;
     left: 0px;
     top: 299px; }
     .mobile-menu__accordion button {
