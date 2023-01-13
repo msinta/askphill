@@ -13,8 +13,8 @@ function Menu() {
           <button style={{padding: "0",border: "none", background: "none"}} onClick={() => setIsOpen(!isOpen)}>
             <img src={hamburger} alt="Hamburger icon" className="mobile-menu__hamburger" />
           </button>
-          <img src={company} alt="Image" className="mobile-menu__logo" />
-          <img src={cart} alt="Image" className="mobile-menu__cart" />
+          <img src={company} alt="company logo" className="mobile-menu__logo" />
+          <img src={cart} alt="cart logo" className="mobile-menu__cart" />
         </div>
       </div>
       {isOpen && (

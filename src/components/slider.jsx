@@ -1,42 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import fitness from './images/fitness.png';
 import tennis from './images/tennis.png';
 import running from './images/running.png';
 
 const ImageSlider = () => {
-  const [isGrabbed, setIsGrabbed] = useState(false);
-  const sliderRef = React.useRef(null);
+  const sliderRef = useRef(null);
+  const [isDown, setIsDown] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-  const handleMouseDown = () => {
-    setIsGrabbed(true);
-    sliderRef.current.style.cursor = 'grabbing';
-  };
-
-  const handleMouseUp = () => {
-    setIsGrabbed(false);
-    sliderRef.current.style.cursor = 'grab';
+  const handleMouseDown = (e) => {
+    setIsDown(true);
+    setStartX(e.pageX - sliderRef.current.offsetLeft);
+    setScrollLeft(sliderRef.current.scrollLeft);
+    sliderRef.current.classList.add('active');
   };
 
   const handleMouseLeave = () => {
-    setIsGrabbed(false);
+    setIsDown(false);
+    sliderRef.current.classList.remove('active');
+  };
+
+  const handleMouseUp = () => {
+    setIsDown(false);
+    sliderRef.current.classList.remove('active');
   };
 
   const handleMouseMove = (e) => {
-    if (isGrabbed) {
-      sliderRef.current.parentElement.scrollLeft -= e.movementX;
-    }
-  };
-
-  const handleWheel = (e) => {
+    if (!isDown) return;
     e.preventDefault();
-    sliderRef.current.parentElement.scrollLeft += e.deltaY;
+    const x = e.pageX - sliderRef.current.offsetLeft;
+    const walk = (x - startX) * 1.7;
+    sliderRef.current.scrollLeft = scrollLeft - walk;
+
   };
 
   return (
     <div className="slider-wrap">
-      <div className="slider" ref={sliderRef} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove} onWheel={handleWheel}>
+      <div className="slider" ref={sliderRef} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove} >
         <div className="slider-inner">
         <img className="item" src={running} alt="slide" style={{ width: '118px', height: '180px' }} />
+          <img className="item" src={tennis} alt="slide" style={{ width: '118px', height: '180px' }} />
+          <img className="item" src={fitness} alt="slide" style={{ width: '118px', height: '180px' }} />
+          <img className="item" src={running} alt="slide" style={{ width: '118px', height: '180px' }} />
           <img className="item" src={tennis} alt="slide" style={{ width: '118px', height: '180px' }} />
           <img className="item" src={fitness} alt="slide" style={{ width: '118px', height: '180px' }} />
           <img className="item" src={running} alt="slide" style={{ width: '118px', height: '180px' }} />
